@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c0d752b16f438a478ae33a3fa503b68
-      internalID: 2094708133
+      spriteID: 32d462f530a5ea24aa686625a7bfd0eb
+      internalID: 1591422780
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FlappyBirdBackground_0: 2094708133
+      FlappyBirdBackground_0: 1591422780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
