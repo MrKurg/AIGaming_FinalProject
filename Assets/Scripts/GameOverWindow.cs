@@ -9,10 +9,12 @@ public class GameOverWindow : MonoBehaviour
     private TextMeshProUGUI scoreText;
     public Button retryButton;
 
+    public GameObject GameOver;
+
     private void Awake()
     {
-        scoreText = transform.Find("scoreText").GetComponent<TextMeshProUGUI>();
-        retryButton = transform.Find("retryButton").GetComponent<Button>();
+        scoreText = GameOver.transform.Find("scoreText").GetComponent<TextMeshProUGUI>();
+        retryButton = GameOver.transform.Find("retryButton").GetComponent<Button>();
 
         retryButton.onClick.AddListener(ButtonClick);
         Hide();
@@ -21,13 +23,15 @@ public class GameOverWindow : MonoBehaviour
     private void Start()
     {
         Bird.GetInstance().OnDied += Bird_OnDied;
+        Debug.Log("I got added to OnDied");
     }
 
-    private void Bird_OnDied(object sender, System.EventArgs e)
+    private void Bird_OnDied (object sender, System.EventArgs e)
     {
         Debug.Log("BIRD DEAD in WINDOW");
-        Show();
         scoreText.text = Level.GetInstance().GetPipesPassedCount().ToString();
+        Show();
+
     }
 
     public void ButtonClick()
@@ -37,11 +41,11 @@ public class GameOverWindow : MonoBehaviour
 
     private void Hide()
     {
-        gameObject.SetActive(false);
+        GameOver.SetActive(false);
     }
 
     private void Show()
     {
-        gameObject.SetActive(true);
+        GameOver.SetActive(true);
     }
 }

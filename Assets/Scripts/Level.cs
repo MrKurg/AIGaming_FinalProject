@@ -65,9 +65,8 @@ public class Level : MonoBehaviour
 
     private void Bird_OnDied(object sender, System.EventArgs e)
     {
-        //Debug.Log("Dead in LEVEL");
+        Debug.Log("Dead in LEVEL");
         state = State.BirdDead;
-
         //System.Threading.Thread.Sleep(100);
     }
 
