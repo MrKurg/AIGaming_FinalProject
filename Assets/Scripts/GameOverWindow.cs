@@ -31,7 +31,7 @@ public class GameOverWindow : MonoBehaviour
 
     private void Start()
     {
-        Bird.GetInstance().OnDied += Bird_OnDied;
+        //Bird.GetInstance().OnDied += Bird_OnDied;
         Debug.Log("I got added to OnDied");
     }
 

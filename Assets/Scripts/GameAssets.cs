@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameAssets : MonoBehaviour
 {
-   private static GameAssets instance;
+    private static GameAssets instance;
 
     public static GameAssets GetInstance()
     {
@@ -16,9 +16,9 @@ public class GameAssets : MonoBehaviour
         instance = this;
     }
 
-    public Sprite bottomPipeSprite;
-    public Transform PrefabBottomGreenPipe;
 
-    public Sprite topPipeSprite;
-    public Transform PrefabTopGreenPipe;
+    public Sprite pipeHeadSprite;
+    public Transform pfPipeHead;
+    public Transform pfPipeBody;
+    public Transform pfPipeCheckpoint;
 }

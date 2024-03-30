@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
-    private const float JUMP_AMOUNT = 100f;
+    private const float JUMP_AMOUNT = 90f;
 
     private static Bird instance;
+
+
 
     public static Bird GetInstance()
     {
@@ -19,6 +21,7 @@ public class Bird : MonoBehaviour
 
     private Rigidbody2D birdRigidBody2D;
     private State state;
+    public bool autoStart = true;
 
     private enum State
     {
@@ -41,7 +44,7 @@ public class Bird : MonoBehaviour
         {
             default:
             case State.WaitingToStart:
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                if (TestInput() || autoStart)
                 {
                     state = State.Playing;
                     birdRigidBody2D.bodyType = RigidbodyType2D.Dynamic;
@@ -50,7 +53,7 @@ public class Bird : MonoBehaviour
                 }
                 break;
             case State.Playing:
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                if (TestInput())
                 {
                     Jump();
                 }
@@ -59,18 +62,44 @@ public class Bird : MonoBehaviour
                 break;
         }
     }
-
-    private void Jump()
+    private bool TestInput()
+    {
+        //return false;
+        
+        return 
+            Input.GetKeyDown(KeyCode.Space) || 
+            Input.GetMouseButtonDown(0) ||
+            Input.touchCount > 0;
+    }
+    public void Jump()
     {
         birdRigidBody2D.velocity = Vector2.up * JUMP_AMOUNT;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        birdRigidBody2D.bodyType = RigidbodyType2D.Static;
-        if (OnDied != null)
+        int checkpointLayer = 7;
+        if (collider.gameObject.layer == checkpointLayer)
         {
-            OnDied(this, EventArgs.Empty);
+            // Touched a checkpoint
+            Debug.Log("Touched CheckPoint");
         }
+        else
+        {
+            birdRigidBody2D.bodyType = RigidbodyType2D.Static;
+            if (OnDied != null) OnDied(this, EventArgs.Empty);
+        }
+    }
+
+    public void Reset()
+    {
+        birdRigidBody2D.velocity = Vector2.zero;
+        birdRigidBody2D.bodyType = RigidbodyType2D.Static;
+        transform.position = Vector2.zero;
+        state = State.WaitingToStart;
+    }
+    public float GetVelocityY()
+    {
+        return birdRigidBody2D.velocity.y;
     }
 }
