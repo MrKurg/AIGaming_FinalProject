@@ -397,8 +397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243fbddcf73929c46b9a9ee641909fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bird1: {fileID: 676021646641573515}
-  Bird2: {fileID: 1225259356}
 --- !u!1 &726828636
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1225259357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,7 +949,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1059436320, guid: f0a9212b47ae7c84bba04a51f4896c32, type: 3}
+  m_Sprite: {fileID: 931894726, guid: f0a9212b47ae7c84bba04a51f4896c32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -971,7 +969,7 @@ Transform:
   m_GameObject: {fileID: 1225259356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1332,7 +1330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &804789499012049187
 GameObject:
   m_ObjectHideFlags: 0

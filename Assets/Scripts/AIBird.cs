@@ -30,9 +30,9 @@ public class AIBird : Agent
 
     private void Bird_OnDied(object sender, System.EventArgs e)
     {
-        AddReward(-1f);
-        EndEpisode();
-        //gameObject.SetActive(false);
+        //AddReward(-1f);
+        //EndEpisode();
+        gameObject.SetActive(false);
         //Loader.Load(Loader.Scene.GameScene);
     }
 
@@ -48,7 +48,7 @@ public class AIBird : Agent
     {
         //UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
         bird.Reset();
-        level.Reset();
+        //level.Reset();
     }
 
     public override void CollectObservations(VectorSensor sensor)

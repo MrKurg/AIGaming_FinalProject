@@ -2,24 +2,6 @@
     "AIFlappyBird": {
         "checkpoints": [
             {
-                "steps": 163823,
-                "file_path": "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-163823.onnx",
-                "reward": -0.38038895175688797,
-                "creation_time": 1711781987.867218,
-                "auxillary_file_paths": [
-                    "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-163823.pt"
-                ]
-            },
-            {
-                "steps": 168888,
-                "file_path": "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-168888.onnx",
-                "reward": -0.3888333961367607,
-                "creation_time": 1711782652.9341784,
-                "auxillary_file_paths": [
-                    "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-168888.pt"
-                ]
-            },
-            {
                 "steps": 269679,
                 "file_path": "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-269679.onnx",
                 "reward": 10.406398522853852,
@@ -27,21 +9,57 @@
                 "auxillary_file_paths": [
                     "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-269679.pt"
                 ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-0.onnx",
+                "reward": null,
+                "creation_time": 1711806449.638422,
+                "auxillary_file_paths": [
+                    "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-0.pt"
+                ]
+            },
+            {
+                "steps": 499947,
+                "file_path": "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-499947.onnx",
+                "reward": 102.99998785369098,
+                "creation_time": 1711808442.2475064,
+                "auxillary_file_paths": [
+                    "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-499947.pt"
+                ]
+            },
+            {
+                "steps": 999983,
+                "file_path": "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-999983.onnx",
+                "reward": 102.9999876152724,
+                "creation_time": 1711810379.7654002,
+                "auxillary_file_paths": [
+                    "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-999983.pt"
+                ]
+            },
+            {
+                "steps": 1015553,
+                "file_path": "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-1015553.onnx",
+                "reward": 72.13999107914667,
+                "creation_time": 1711810500.5025508,
+                "auxillary_file_paths": [
+                    "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-1015553.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 269679,
+            "steps": 1015553,
             "file_path": "results\\NewAIFlappyBird\\AIFlappyBird.onnx",
-            "reward": 10.406398522853852,
-            "creation_time": 1711790784.8562427,
+            "reward": 72.13999107914667,
+            "creation_time": 1711810500.5025508,
             "auxillary_file_paths": [
-                "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-269679.pt"
+                "results\\NewAIFlappyBird\\AIFlappyBird\\AIFlappyBird-1015553.pt"
             ]
         }
     },
     "metadata": {
         "stats_format_version": "0.3.0",
         "mlagents_version": "1.0.0",
-        "torch_version": "2.2.1+cu121"
+        "torch_version": "2.2.1+cpu"
     }
 }

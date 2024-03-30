@@ -55,6 +55,7 @@ public class Level : MonoBehaviour
         instance = this;
         pipeList = new List<Pipe>();
         pipeCompleteList = new List<PipeComplete>();
+        pipeSpawnTimerMax = 1.6f;
         SetDifficulty(Difficulty.Easy);
         state = State.WaitingToStart;
     }
